@@ -1,12 +1,12 @@
-<h1>{{title}}</h1>
-<h1>{{name}}</h1>
-<h2>{{hobby}}</h2>
+<h1>{{eventUFC}}</h1>
+<h1>{{Name}}</h1>
+<h2>{{Slogan}}</h2>
 <div>
-  <div *ngFor="let user of users" class="user-container">
-    <div><strong>ID:</strong> {{ user.id }}</div>
-    <div><strong>Name:</strong> {{ user.firstName }} {{ user.lastName }}</div>
-    <div><strong>Hobby:</strong> {{ user.hobby }}</div>
-    <div><strong>Is Admin:</strong> {{ user.isAdmin ? 'Yes' : 'No' }}</div>
+  <div *ngFor="let fighter of fighters" class="fighter-container">
+    <div><strong>Fighter ID:</strong> {{ fighter.fighterid }}</div>
+    <div><strong>Name:</strong> {{ fighter.firstName }} {{ fighter.lastName }}</div>
+    <div><strong>Weight category:</strong> {{ fighter.weightClass }}</div>
+    <div><strong>Champion:</strong> {{ fighter.isChampion ? 'Yes' : 'No' }}</div>
     <hr>
   </div>
 </div>

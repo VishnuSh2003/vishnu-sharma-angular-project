@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {JsonPipe, NgForOf} from "@angular/common";
-import {User} from "./shared/models/user";
+import {Fighter} from "./shared/models/user";
 
 @Component({
   selector: 'app-root',
@@ -11,17 +11,17 @@ import {User} from "./shared/models/user";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'vishnu-sharma-angular-project';
-  name = 'Vishnu Sharma';
-  hobby= 'music';
+  eventUFC = 'UFC Fight Day';
+  Name = 'Vishnu Sharma';
+  Slogan= 'Fight for Glory, Fight for Victory';
 
-  users: User[] = [
-    { id: 1, firstName: 'Ajay', lastName: 'Singh', hobby: 'video editting', isAdmin: true },
-    { id: 2, firstName: 'karan', lastName: 'Arjun', hobby: 'Movies', isAdmin: false },
-    { id: 3, firstName: 'Jai', lastName: 'Vaishist', hobby: 'Cycling' },  // Optional isAdmin
-    { id: 4, firstName: 'Diana', lastName: 'Richard', hobby: 'Gymnastics', isAdmin: true },
-    { id: 5, firstName: 'Chris', lastName: 'Brown', hobby: 'Acting' },       // Optional isAdmin
-    { id: 6, firstName: 'Mathew', lastName: 'haugs', hobby: 'Teaching', isAdmin: true }
+  fighters: Fighter[] = [
+    { fighterid: 1, firstName: 'Conor', lastName: 'McGregor', weightClass: 'Lightweight', wins:22 ,losses:6  , isChampion:true },
+    { fighterid: 2, firstName: 'Khabib', lastName: 'Nurmagomedov', weightClass: 'lightweight', wins: 29 , losses:  0, isChampion:true},
+    { fighterid: 3, firstName: 'Amandaa', lastName: 'Nunes', weightClass: 'Featherweight' ,wins:21 , losses:5  , isChampion:true},
+    { fighterid: 4, firstName: 'Tony', lastName: 'Ferguson', weightClass: 'Heavyweight', wins: 25 ,losses: 7 ,isChampion:false},
+    { fighterid: 5, firstName: 'Poirier', lastName: 'Dustin', weightClass: 'Lightweight',wins:28  , losses: 7  },
+    { fighterid: 6, firstName: 'Stipe', lastName: 'Miocic', weightClass: 'Lightweight', wins:20  , losses: 4 , isChampion:true}
   ];
 
 }

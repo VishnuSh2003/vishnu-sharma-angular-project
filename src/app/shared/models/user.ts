@@ -1,7 +1,9 @@
-export interface User {
-id : number;
+export interface Fighter {
+fighterid : number;
 firstName : string;
 lastName: string;
-hobby:string;
-isAdmin? :boolean
+weightClass:string;
+wins: number;
+losses: number;
+isChampion?:boolean;
 }
