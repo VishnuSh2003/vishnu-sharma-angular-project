@@ -1,5 +1,5 @@
-<div  class="fighter--item">
-  <h2>{{fighter.firstName}}  {{fighter.lastName}}</h2>
+<div *ngIf="fighter" class="fighter--item">
+  <h1>{{fighter.firstName}}  {{fighter.lastName}}</h1>
   <h3>weight Class:{{fighter.weightClass}}</h3>
   <p>Wins:{{fighter.wins}} </p>
   <p>Losses:{{fighter.losses}}</p>

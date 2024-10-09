@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import {Fighter} from "../shared/models/user";
 import {FighterListItemComponent} from "../fighter-list-item/fighter-list-item.component";
+import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-fighter-list',
   standalone: true,
   imports: [
-    FighterListItemComponent
+    FighterListItemComponent,
+    NgForOf
   ],
   templateUrl: './fighter-list.component.html',
-  styleUrl: './fighter-list.component.css'
+  styleUrl: './fighter-list.component.css',
 })
 export class FighterListComponent {
   fighters:Fighter[] =[
