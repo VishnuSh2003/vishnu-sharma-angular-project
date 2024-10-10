@@ -12,7 +12,7 @@ import {FighterListComponent} from "./fighter-list/fighter-list.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  eventUFC = 'UFC Fight Day';
+  title = 'UFC Fight Day';
   Name = 'Vishnu Sharma';
   Slogan= 'Fight for Glory, Fight for Victory';
 
