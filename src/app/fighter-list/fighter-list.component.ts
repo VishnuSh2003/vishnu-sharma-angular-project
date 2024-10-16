@@ -26,4 +26,9 @@ export class FighterListComponent implements OnInit{
     });
   }
 
+  selectedFighters?: Fighter;
+  selectFighter(fighter:Fighter):void {
+    this.selectedFighters = fighter;
+  }
+
 }

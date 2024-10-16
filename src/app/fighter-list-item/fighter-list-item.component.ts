@@ -12,5 +12,5 @@ import {NgIf} from "@angular/common";
   styleUrl: './fighter-list-item.component.css'
 })
 export class FighterListItemComponent {
-@Input() fighter!:Fighter;
+@Input() fighters?:Fighter;
 }

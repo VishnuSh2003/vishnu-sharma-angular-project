@@ -1,3 +1,15 @@
-<h2>Fighter-List</h2>
-<p>List of fighters will appear here</p>
-<app-fighter-list-item *ngFor="let fighter of fighters" [fighter]= "fighter"></app-fighter-list-item>
+
+  <div *ngFor = "let fighter of fighters" (click)="selectFighter(fighter)">
+  <p>{{fighter.fighterid}}</p>
+  <p>{{fighter.firstName}}</p>
+  <p>{{fighter.lastName}}</p>
+  <p>{{fighter.weightClass}}</p>
+  <p>{{fighter.wins}}</p>
+  <p>{{fighter.losses}}</p>
+  <p>{{fighter.isChampion ? 'Yes' : 'No'}}</p>
+
+
+
+<app-fighter-list-item [fighters] = "selectedFighters"></app-fighter-list-item>
+
+</div>
