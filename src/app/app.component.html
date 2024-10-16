@@ -1,18 +1,8 @@
-<h1>{{title}}</h1>
-<h1>{{Name}}</h1>
-<h2>{{Slogan}}</h2>
-
-
-<app-fighter-list></app-fighter-list>
-
-<!--
-<div>
-  <div *ngFor="let fighter of fighters" class="fighter-container">
-    <div><strong>Fighter ID:</strong> {{ fighter.fighterid }}</div>
-    <div><strong>Name:</strong> {{ fighter.firstName }} {{ fighter.lastName }}</div>
-    <div><strong>Weight category:</strong> {{ fighter.weightClass }}</div>
-    <div><strong>Champion:</strong> {{ fighter.isChampion ? 'Yes' : 'No' }}</div>
-    <hr>
-  </div>
+<div class = "nav-bar">
+  <nav>
+    <a routerLink="/fighters" routerLinkActive="active">Fighter-List</a>
+    <a routerLink="/modify-list-item" routerLinkActive="active">Modify Fighter List</a>
+  </nav>
 </div>
--->
+
+<router-outlet></router-outlet>
