@@ -3,12 +3,14 @@ import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/
 import {Fighter} from "../shared/models/user";
 import {ActivatedRoute, Router} from "@angular/router";
 import {FighterService} from "../Service/fighter.service";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-modify-list-item',
   standalone: true,
   imports: [
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgIf
   ],
   templateUrl: './modify-list-item.component.html',
   styleUrl: './modify-list-item.component.css'

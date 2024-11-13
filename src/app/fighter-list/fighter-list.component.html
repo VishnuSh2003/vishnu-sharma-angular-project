@@ -7,10 +7,11 @@
   <p>{{fighter.wins}}</p>
   <p>{{fighter.losses}}</p>
   <p>{{fighter.isChampion ? 'Yes' : 'No'}}</p>
+    <p><Button>Edit</Button></p>
   <p><img [src]="fighter.minePictures"></p>
 
 
 
-<app-fighter-list-item [fighters] = "selectedFighters"></app-fighter-list-item>
+<app-fighter-list-item [fighter] = "selectedFighters"></app-fighter-list-item>
 
 </div>

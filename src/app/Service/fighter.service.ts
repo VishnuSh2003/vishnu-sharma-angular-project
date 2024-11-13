@@ -39,8 +39,4 @@ export class FighterService{
   generateNewId(): number {
     return this.fighters.length > 0 ? Math.max(...this.fighters.map(fighter => fighter.fighterid)) + 1 : 1;
   }
-  private handleError(error: HttpErrorResponse) {
-    console.error('API error:', error);
-    return throwError(() => new Error('Server error, please try again.'));
-  }
 }
