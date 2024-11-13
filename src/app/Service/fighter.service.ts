@@ -1,7 +1,8 @@
 import { fighters } from "../Data/mock-content";
 import { Fighter } from "../shared/models/user";
 import {Injectable} from "@angular/core";
-import {Observable, of} from "rxjs";
+import {Observable, of, throwError} from "rxjs";
+import {HttpErrorResponse} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root',
@@ -28,13 +29,18 @@ export class FighterService{
     return of(this.fighters);
   }
     deleteFighter(fighterId : number): Observable<Fighter[]>{
-    this.fighters= this.fighters.filter(fighter => fighter.fighterid);
+    this.fighters= this.fighters.filter(fighter => fighter.fighterid !==fighterId);
     return of(this.fighters);
     }
     getFighterById(fighterId :number) :Observable<Fighter | undefined>{
     const fighter = this.fighters.find(fighter => fighter.fighterid === fighterId);
     return of(fighter);
   }
-
-
+  generateNewId(): number {
+    return this.fighters.length > 0 ? Math.max(...this.fighters.map(fighter => fighter.fighterid)) + 1 : 1;
+  }
+  private handleError(error: HttpErrorResponse) {
+    console.error('API error:', error);
+    return throwError(() => new Error('Server error, please try again.'));
+  }
 }
