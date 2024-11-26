@@ -1,11 +1,11 @@
 <div *ngIf="fighter" class="fighter--item">
   <div class="fighter--info">
     <p>{{fighter.fighterid}}</p>
-    <p>{{fighter.firstName}}</p>
+    <p>{{fighter.firstName| uppercase }}</p>
     <p>{{fighter.lastName}}</p>
-    <p>{{fighter.weightClass}}</p>
-    <p>{{fighter.wins}}</p>
-    <p>{{fighter.losses}}</p>
+    <p>{{fighter.weightClass }}</p>
+    <p>{{fighter.wins | currency}}</p>
+    <p>{{fighter.losses | percent}}</p>
     <p class="fighter--isChampion">{{fighter.isChampion ? 'Yes' : 'No'}}</p>
   </div>
   <div class="fighter--image">
