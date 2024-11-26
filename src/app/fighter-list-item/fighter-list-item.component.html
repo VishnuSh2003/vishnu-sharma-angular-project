@@ -1,7 +1,14 @@
-<div *ngIf="fighters" class="fighter--item">
-  <h1>{{fighters.firstName}}  {{fighters.lastName}}</h1>
-  <h3>weight Class:{{fighters.weightClass}}</h3>
-  <p>Wins:{{fighters.wins}} </p>
-  <p>Losses:{{fighters.losses}}</p>
-  <p>Champion: {{fighters.isChampion ? 'yes' : 'no'}}</p>
+<div *ngIf="fighter" class="fighter--item">
+  <div class="fighter--info">
+    <p>{{fighter.fighterid}}</p>
+    <p>{{fighter.firstName}}</p>
+    <p>{{fighter.lastName}}</p>
+    <p>{{fighter.weightClass}}</p>
+    <p>{{fighter.wins}}</p>
+    <p>{{fighter.losses}}</p>
+    <p class="fighter--isChampion">{{fighter.isChampion ? 'Yes' : 'No'}}</p>
+  </div>
+  <div class="fighter--image">
+    <img [src]="fighter.minePictures" alt="Fighter Image">
+  </div>
 </div>

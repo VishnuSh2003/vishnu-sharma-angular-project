@@ -1,5 +1,43 @@
-.fighter--item{
-  border :2px solid blue;
-  margin: 10px;
-  padding: 10px;
+.fighter--item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.fighter--info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 20px;  /* Add right margin to separate text and image */
+}
+
+.fighter--info p {
+  margin: 12px 0;  /* Increased margin for better spacing */
+  font-size: 25px;  /* Increased text size */
+  color: #333;
+}
+
+.fighter--info p strong {
+  font-weight: bold;
+}
+
+.fighter--image {
+  max-width: 320px;  /* Slightly bigger max-width for the image */
+  flex-shrink: 0;  /* Prevent image from shrinking */
+}
+
+.fighter--image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

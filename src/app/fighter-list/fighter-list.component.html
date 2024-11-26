@@ -1,16 +1,6 @@
 
   <div *ngFor = "let fighter of fighters" (click)="selectFighter(fighter)">
-  <p>{{fighter.fighterid}}</p>
-  <p>{{fighter.firstName}}</p>
-  <p>{{fighter.lastName}}</p>
-  <p>{{fighter.weightClass}}</p>
-  <p>{{fighter.wins}}</p>
-  <p>{{fighter.losses}}</p>
-  <p>{{fighter.isChampion ? 'Yes' : 'No'}}</p>
-  <p><img [src]="fighter.minePictures"></p>
 
-
-
-<app-fighter-list-item [fighters] = "selectedFighters"></app-fighter-list-item>
+<app-fighter-list-item [fighter] = "fighter"></app-fighter-list-item>
 
 </div>
