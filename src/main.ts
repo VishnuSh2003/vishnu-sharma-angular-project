@@ -12,7 +12,10 @@ const routes: Routes = [
   {path:'fighters', component: FighterListComponent},
   {path:'fighters/:firstName', component: FighterListItemComponent},
   {path: 'modify-list-item', component: ModifyListItemComponent},
-  {path: '**', component:PageNotFoundComponent}
+  {path: '**', component:PageNotFoundComponent},
+  { path: 'fighters', loadChildren: () => import('./app/fighter-list/fighter-list.component').then(m => m.FighterListComponent) },
+  { path: 'modify-list-item', loadChildren: () => import('./app/modify-list-item/modify-list-item.component').then(m => m.ModifyListItemComponent) },
+  { path: '**', component: PageNotFoundComponent }
 ]
 
 bootstrapApplication(AppComponent, {providers: [provideRouter(routes)]
