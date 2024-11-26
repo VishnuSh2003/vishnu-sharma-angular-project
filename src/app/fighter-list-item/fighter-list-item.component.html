@@ -1,6 +1,7 @@
 <div *ngIf="fighter" class="fighter--item">
   <div class="fighter--info">
     <p>{{fighter.fighterid}}</p>
+    <p>{{fighter | nameCombinePipe}}</p>
     <p>{{fighter.firstName| uppercase }}</p>
     <p>{{fighter.lastName}}</p>
     <p>{{fighter.weightClass }}</p>
