@@ -1,11 +1,11 @@
 <div *ngIf="fighter" class="fighter--item">
-  <div class="fighter--info">
+  <div class="fighter--info" appHoverColor [hoverColor]="'green'" >
     <p>{{fighter.fighterid}}</p>
     <p>{{fighter | nameCombinePipe}}</p>
-    <p>{{fighter.firstName| uppercase }}</p>
+    <p appHoverColor [hoverColor]="'red'">{{fighter.firstName| uppercase }}</p>
     <p>{{fighter.lastName}}</p>
-    <p>{{fighter.weightClass }}</p>
-    <p>{{fighter.wins | currency}}</p>
+    <p appHoverColor [hoverColor]="'red'">{{fighter.weightClass  }}</p>
+    <p appHoverColor [hoverColor]="'red'">{{fighter.wins | currency}}</p>
     <p>{{fighter.losses | percent}}</p>
     <p class="fighter--isChampion">{{fighter.isChampion ? 'Yes' : 'No'}}</p>
   </div>
