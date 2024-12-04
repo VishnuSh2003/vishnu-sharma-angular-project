@@ -17,7 +17,7 @@ export class HighlightOnFocusDirective {
   @HostListener('blur') onBlur() {
     this.applyHighlight(this.defaultColor);
   }
-
+  //
   private applyHighlight(color: string) {
     this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', color);
   }
